@@ -1,0 +1,44 @@
+﻿<Window x:Class="Lap03.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lap03"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+
+        </Grid.ColumnDefinitions>
+
+        <Label  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="35" FontWeight="Bold" Foreground="Blue" Grid.ColumnSpan="4">Carculator</Label>
+        <Label Grid.Column="4" Grid.ColumnSpan="5" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="35" FontWeight="Bold">History</Label>
+        <TextBox Name="txtInput1" Grid.Row="1" Grid.ColumnSpan="4" FontSize="25" BorderThickness="2" Grid.Column="0"  VerticalAlignment="Top" TextAlignment="Right" TextWrapping="Wrap" Height="40" Margin="10,10,10,0"  ></TextBox>
+        <TextBox Name="txtInput2" Grid.Row="1" Grid.ColumnSpan="4" FontSize="25" BorderThickness="2" Grid.Column="0"  VerticalAlignment="Top" TextAlignment="Right" TextWrapping="Wrap" Height="40" Margin="10,63,10,0"  ></TextBox>
+
+        <Button Margin="10" Height="50" Grid.Row="2" Grid.Column="0"  Click="btnPlus" >+</Button>
+        <Button Margin="10" Height="50" Grid.Row="2" Grid.Column="1"  Click="btnMinus" >-</Button>
+        <Button Margin="10" Height="50" Grid.Row="2" Grid.Column="2"  Click="btnMutiply" >*</Button>
+        <Button Margin="10" Height="50" Grid.Row="2" Grid.Column="3"  Click="btnDivide" >/</Button>
+
+        <TextBox Name="txtResult" Grid.Row="3" BorderThickness="2" Grid.Column="0" FontSize="25" FontWeight="Bold" VerticalAlignment="Center"  TextWrapping="Wrap" TextAlignment="Center" Height="40" Margin="10,-63,10,0" Grid.ColumnSpan="4" ></TextBox>
+        <ListBox Name="lstRecentCalculation" Grid.Row="1"  Grid.RowSpan="3" Grid.Column="4" Grid.ColumnSpan="5" FontSize="15" BorderThickness="2"  VerticalAlignment="Top" Height="236"  Margin="10,10,10,0" ></ListBox>
+
+    </Grid>
+</Window>
